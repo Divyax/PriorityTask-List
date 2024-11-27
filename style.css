@@ -1,0 +1,105 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+input.input {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #218838;
+}
+
+ul.tasklist {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul.tasklist li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul.tasklist li span {
+    flex-grow: 1; /* Allows the text to take up the remaining space */
+}
+
+ul.tasklist li .buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul.tasklist li button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+ul.tasklist li button:hover {
+    background-color: #0056b3;
+}
+
+/* Up/Down Buttons */
+ul.tasklist li button.up,
+ul.tasklist li button.down {
+    background-color: #ffc107;
+}
+
+ul.tasklist li button.up:hover,
+ul.tasklist li button.down:hover {
+    background-color: #e0a800;
+}
+
+/* Delete Button */
+ul.tasklist li button:contains("❌") {
+    background-color: #dc3545;
+}
+
+ul.tasklist li button:contains("❌"):hover {
+    background-color: #c82333;
+}
+
+/* Hide the Up button on the first item and Down button on the last item */
+.tasklist li:first-child .up,
+.tasklist li:last-child .down {
+    display: none;
+}
+
+/* Align buttons to the right */
+ul.tasklist li .buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
